@@ -1,0 +1,16 @@
+{
+  "name": "21_USER_REPORT",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d4e88838-bf21-448b-ad85-cb0dbf6ad7eb",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

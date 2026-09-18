@@ -1,0 +1,16 @@
+{
+  "name": "15_SIMULATOR",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b752f4d2-033c-42b9-be60-db08ff3fd02f",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

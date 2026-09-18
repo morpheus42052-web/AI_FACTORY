@@ -1,0 +1,16 @@
+{
+  "name": "13_VERSION_MANAGER",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "e5bc1512-5660-44d7-9e11-cb40f2206aa2",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

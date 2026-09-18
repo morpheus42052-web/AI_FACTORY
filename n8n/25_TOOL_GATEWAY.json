@@ -1,0 +1,16 @@
+{
+  "name": "25_TOOL_GATEWAY",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5144c187-4778-4e86-8b48-ce3c2ae4fed3",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

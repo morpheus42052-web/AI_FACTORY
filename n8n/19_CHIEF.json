@@ -1,0 +1,16 @@
+{
+  "name": "19_CHIEF",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bdf07272-58f4-4423-ad67-884c8355a434",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "07_MEMORY_WRITE",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "59197b1c-35a9-4b4a-92cd-9dcb67be0650",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

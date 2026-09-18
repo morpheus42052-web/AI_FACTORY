@@ -1,0 +1,16 @@
+{
+  "name": "10_KNOWLEDGE_SEARCH",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "bca74061-850a-4957-a6bd-d4eda1a1aee8",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

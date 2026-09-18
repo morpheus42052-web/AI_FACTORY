@@ -1,0 +1,95 @@
+{
+  "managers": [
+    {
+      "code": "research_manager",
+      "name": "Research Manager"
+    },
+    {
+      "code": "content_manager",
+      "name": "Content Manager"
+    },
+    {
+      "code": "analytics_manager",
+      "name": "Analytics Manager"
+    },
+    {
+      "code": "distribution_manager",
+      "name": "Distribution Manager"
+    }
+  ],
+  "agents": [
+    {
+      "code": "research_01",
+      "name": "Алекс",
+      "role": "Research Agent",
+      "manager": "research_manager",
+      "capabilities": [
+        "web_research"
+      ]
+    },
+    {
+      "code": "factcheck_01",
+      "name": "Fact Checker",
+      "role": "Fact Check Agent",
+      "manager": "research_manager",
+      "capabilities": [
+        "fact_checking"
+      ]
+    },
+    {
+      "code": "analyst_01",
+      "name": "Analyst",
+      "role": "Analytics Agent",
+      "manager": "analytics_manager",
+      "capabilities": [
+        "data_analysis"
+      ]
+    },
+    {
+      "code": "writer_01",
+      "name": "Writer",
+      "role": "Writing Agent",
+      "manager": "content_manager",
+      "capabilities": [
+        "copywriting"
+      ]
+    },
+    {
+      "code": "editor_01",
+      "name": "Editor",
+      "role": "Editing Agent",
+      "manager": "content_manager",
+      "capabilities": [
+        "content_analysis"
+      ]
+    },
+    {
+      "code": "seo_01",
+      "name": "SEO Agent",
+      "role": "SEO Agent",
+      "manager": "distribution_manager",
+      "capabilities": [
+        "seo"
+      ]
+    },
+    {
+      "code": "qc_01",
+      "name": "QC Agent",
+      "role": "Quality Control",
+      "manager": "content_manager",
+      "capabilities": [
+        "quality_control"
+      ]
+    },
+    {
+      "code": "orchestrator_01",
+      "name": "Orchestrator",
+      "role": "Orchestration Agent",
+      "manager": "analytics_manager",
+      "capabilities": [
+        "agent_orchestration",
+        "task_planning"
+      ]
+    }
+  ]
+}

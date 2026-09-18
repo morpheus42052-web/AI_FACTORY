@@ -1,0 +1,16 @@
+{
+  "name": "09_KNOWLEDGE_INGEST",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "66866126-529d-4ed8-9b81-8d9bd96d52f4",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

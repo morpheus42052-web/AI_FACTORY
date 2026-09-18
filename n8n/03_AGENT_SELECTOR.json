@@ -1,0 +1,16 @@
+{
+  "name": "03_AGENT_SELECTOR",
+  "nodes": [],
+  "connections": {},
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "1ebfb9d5-6eea-40e0-93a5-a5798be4dc63",
+  "tags": [],
+  "meta": {
+    "ai_factory_status": "scaffold",
+    "note": "Provider-specific AI/tool nodes and credentials must be configured before production activation."
+  }
+}

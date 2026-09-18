@@ -1,0 +1,121 @@
+{
+  "name": "00_CORE_INTAKE",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "cbfcf2d5-3d4e-45aa-85f1-c66ee40198b7",
+      "name": "When clicking Execute workflow",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "582c57c9-b07d-47ee-a904-f56e5ac197c6",
+              "name": "objective",
+              "value": "Тестовая задача AI_FACTORY",
+              "type": "string"
+            },
+            {
+              "id": "0a68645a-6291-4fb2-8726-b49c741e0878",
+              "name": "priority",
+              "value": 50,
+              "type": "number"
+            },
+            {
+              "id": "2fc3ed6d-58bc-45f5-b561-120bc8733df2",
+              "name": "type",
+              "value": "general",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7d46b137-aafb-4660-a8c5-023f22dd4a10",
+      "name": "Test Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input = $json ?? {};\nconst objective = typeof input.objective === 'string' ? input.objective.trim() : '';\nconst priority = input.priority === undefined || input.priority === null || input.priority === '' ? 50 : Number(input.priority);\nconst type = typeof input.type === 'string' && input.type.trim() ? input.type.trim() : 'general';\nconst createdBy = typeof input.created_by === 'string' && input.created_by.trim() ? input.created_by.trim() : 'user';\nconst constraints = input.constraints && typeof input.constraints === 'object' ? input.constraints : {};\nconst inputData = input.input_data && typeof input.input_data === 'object' ? input.input_data : {};\nreturn [{json:{objective,type,priority,created_by:createdBy,constraints,input_data:inputData,intake_metadata:{received_at:new Date().toISOString(),source:input.source||'manual',request_id:input.request_id||null}}}];",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "f2321cdb-fbce-48a9-bdc8-f642cea2a491",
+      "name": "Normalize Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        560,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "const input=$json??{}; const errors=[];\nif(!input.objective||typeof input.objective!=='string') errors.push('OBJECTIVE_REQUIRED');\nelse if(input.objective.trim().length<3) errors.push('OBJECTIVE_TOO_SHORT');\nif(input.priority!==undefined&&(!Number.isInteger(Number(input.priority))||Number(input.priority)<0||Number(input.priority)>100)) errors.push('INVALID_PRIORITY');\nreturn [{json:{...input,valid:errors.length===0,validation_errors:errors}}];",
+        "mode": "runOnceForAllItems"
+      },
+      "id": "887e6ed7-43c4-425b-8751-cae619d14ef5",
+      "name": "Validate Input",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        860,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "When clicking Execute workflow": {
+      "main": [
+        [
+          {
+            "node": "Test Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test Input": {
+      "main": [
+        [
+          {
+            "node": "Normalize Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalize Input": {
+      "main": [
+        [
+          {
+            "node": "Validate Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "f20521a0-be25-4022-a1bf-c7bae35237eb",
+  "tags": []
+}
