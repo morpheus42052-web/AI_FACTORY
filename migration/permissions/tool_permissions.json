@@ -1,0 +1,23 @@
+{
+  "_source": "ai_core.tool_permissions (10 rows) + af_permissions catalogue (7) + af_agents permission mirror. Secret tool credentials NOT exported.",
+  "permission_catalogue": [
+    {"id": 1, "permission_code": "tool_web_search", "description": "Web search access"},
+    {"id": 2, "permission_code": "tool_read_kb", "description": "Read knowledge base"},
+    {"id": 3, "permission_code": "tool_data_read", "description": "Read analytics data"},
+    {"id": 4, "permission_code": "tool_write_content", "description": "Create and edit content"},
+    {"id": 5, "permission_code": "tool_seo", "description": "SEO tooling"},
+    {"id": 6, "permission_code": "tool_qc", "description": "Quality control checks"},
+    {"id": 7, "permission_code": "tool_orchestrate", "description": "Task planning and orchestration"}
+  ],
+  "agent_tool_permissions": [
+    {"agent": "research_01", "capability": "web_research", "tools": ["tool_web_search", "tool_read_kb"], "permission": "allowed", "status": "active"},
+    {"agent": "factcheck_01", "capability": "fact_checking", "tools": ["tool_web_search", "tool_read_kb"], "permission": "allowed", "status": "active"},
+    {"agent": "analyst_01", "capability": "data_analysis", "tools": ["tool_data_read"], "permission": "allowed", "status": "active"},
+    {"agent": "writer_01", "capability": "copywriting", "tools": ["tool_write_content"], "permission": "allowed", "status": "active"},
+    {"agent": "editor_01", "capability": "content_analysis", "tools": ["tool_write_content"], "permission": "allowed", "status": "active"},
+    {"agent": "seo_01", "capability": "seo", "tools": ["tool_seo"], "permission": "allowed", "status": "active"},
+    {"agent": "qc_01", "capability": "quality_control", "tools": ["tool_qc"], "permission": "allowed", "status": "active"},
+    {"agent": "orchestrator_01", "capability": "task_planning,agent_orchestration", "tools": ["tool_orchestrate"], "permission": "allowed", "status": "active"}
+  ],
+  "_note": "ai_core.tool_permissions has 10 rows total; af_agents mirror lists primary per-agent tool assignments. tool_permissions.allowed defaults true. Actual tool execution boundary is the Tool Gateway workflow (MvtXbc0zN7MZYyNC). Brave Search / web_search backing credential secret NOT exported."
+}

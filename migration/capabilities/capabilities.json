@@ -1,0 +1,33 @@
+{
+  "_source": "ai_core.capabilities (9 in use) + af_capabilities (16 defined) + af_routing",
+  "capabilities_defined": [
+    {"id": 1, "capability_code": "web_research", "description": "Web research and information gathering", "in_use": true},
+    {"id": 2, "capability_code": "fact_checking", "description": "Fact verification and source analysis", "in_use": true},
+    {"id": 3, "capability_code": "data_analysis", "description": "Data analysis", "in_use": true},
+    {"id": 4, "capability_code": "copywriting", "description": "Copywriting and content creation", "in_use": true},
+    {"id": 5, "capability_code": "content_analysis", "description": "Content analysis and editing", "in_use": true},
+    {"id": 6, "capability_code": "seo", "description": "SEO optimization", "in_use": true},
+    {"id": 7, "capability_code": "image_generation", "description": "Image generation", "in_use": false},
+    {"id": 8, "capability_code": "translation", "description": "Translation and localization", "in_use": false},
+    {"id": 9, "capability_code": "summarization", "description": "Summarization", "in_use": false},
+    {"id": 10, "capability_code": "quality_control", "description": "Quality control checks", "in_use": true},
+    {"id": 11, "capability_code": "data_extraction", "description": "Data extraction", "in_use": false},
+    {"id": 12, "capability_code": "task_planning", "description": "Task planning and decomposition", "in_use": true},
+    {"id": 13, "capability_code": "agent_orchestration", "description": "Agent orchestration", "in_use": true},
+    {"id": 14, "capability_code": "memory_management", "description": "Memory management", "in_use": false},
+    {"id": 15, "capability_code": "learning", "description": "Learning from results", "in_use": false},
+    {"id": 16, "capability_code": "system_monitoring", "description": "System monitoring", "in_use": false}
+  ],
+  "agent_capabilities_routing": [
+    {"id": 1, "capability_code": "web_research", "manager_code": "research_manager", "agent_code": "research_01", "is_primary": true, "proficiency": null},
+    {"id": 2, "capability_code": "fact_checking", "manager_code": "research_manager", "agent_code": "factcheck_01", "is_primary": true, "proficiency": null},
+    {"id": 3, "capability_code": "data_analysis", "manager_code": "analytics_manager", "agent_code": "analyst_01", "is_primary": true, "proficiency": null},
+    {"id": 4, "capability_code": "copywriting", "manager_code": "content_manager", "agent_code": "writer_01", "is_primary": true, "proficiency": null},
+    {"id": 5, "capability_code": "content_analysis", "manager_code": "content_manager", "agent_code": "editor_01", "is_primary": true, "proficiency": null},
+    {"id": 6, "capability_code": "seo", "manager_code": "distribution_manager", "agent_code": "seo_01", "is_primary": true, "proficiency": null},
+    {"id": 7, "capability_code": "quality_control", "manager_code": "content_manager", "agent_code": "qc_01", "is_primary": true, "proficiency": null},
+    {"id": 8, "capability_code": "task_planning", "manager_code": "analytics_manager", "agent_code": "orchestrator_01", "is_primary": true, "proficiency": null},
+    {"id": 9, "capability_code": "agent_orchestration", "manager_code": "analytics_manager", "agent_code": "orchestrator_01", "is_primary": true, "proficiency": null}
+  ],
+  "_proficiency_note": "proficiency is NULL for all agent_capabilities rows in ai_core (architecture norm, NOT invented). is_primary=true for all 9 routing rows."
+}

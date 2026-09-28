@@ -1,0 +1,10 @@
+{
+  "_source": "ai_core.managers (authoritative) + af_managers DataTable mirror",
+  "count": 4,
+  "managers": [
+    {"manager_id": 1, "manager_code": "analytics_manager", "name": "Analytics Manager", "role": "Analytics Manager", "status": "active", "allowed_capabilities": ["data_analysis", "task_planning", "agent_orchestration"], "responsibilities": ["data analysis", "task planning", "orchestration", "performance analysis"], "managed_agents": ["analyst_01", "orchestrator_01"]},
+    {"manager_id": 2, "manager_code": "content_manager", "name": "Content Manager", "role": "Content Manager", "status": "active", "allowed_capabilities": ["copywriting", "content_analysis", "quality_control"], "responsibilities": ["writing", "editing", "content analysis", "quality control"], "managed_agents": ["writer_01", "editor_01", "qc_01"]},
+    {"manager_id": 3, "manager_code": "distribution_manager", "name": "Distribution Manager", "role": "Distribution Manager", "status": "active", "allowed_capabilities": ["seo"], "responsibilities": ["SEO", "distribution", "publishing preparation", "channel optimization"], "managed_agents": ["seo_01"]},
+    {"manager_id": 4, "manager_code": "research_manager", "name": "Research Manager", "role": "Research Manager", "status": "active", "allowed_capabilities": ["web_research", "fact_checking"], "responsibilities": ["research", "information gathering", "fact verification", "source analysis"], "managed_agents": ["research_01", "factcheck_01"]}
+  ]
+}
