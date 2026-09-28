@@ -1,0 +1,50 @@
+# === Secrets — NEVER commit ===
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+*.pfx
+*.crt
+*.cer
+id_rsa
+id_rsa.*
+*_rsa
+*.ppk
+credentials.json
+credentials/*.secret
+secrets/
+secret/
+*secret*
+*.secret
+tokens/
+*.token
+apikey*
+api_key*
+*apikey*
+*_apikey*
+*password*
+*.pgpass
+.pgpass
+
+# n8n runtime / local
+.n8n/
+n8n_data/
+
+# Python / local runtime
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/

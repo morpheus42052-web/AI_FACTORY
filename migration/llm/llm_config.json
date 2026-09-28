@@ -1,0 +1,30 @@
+{
+  "_source": "n8n runtime workflow LLM nodes + ai_core.agents.model + OmniRoute /v1/models live probe. Secrets excluded.",
+  "provider": {
+    "name": "OmniRoute",
+    "type": "OpenAI-compatible gateway",
+    "base_url": "https://dive-alt-avoiding-shopping.trycloudflare.com",
+    "base_url_note": "Cloudflare tunnel (trycloudflare) — EPHEMERAL host (MIG-B05). Replace with a stable endpoint for durable restore.",
+    "endpoints": ["/v1/models", "/v1/chat/completions"],
+    "api_key": "ENVIRONMENT_VARIABLE_REQUIRED",
+    "n8n_credential_ref": "AI_FACTORY OmniRoute (MVP) / 7wsUxjPHigGMPX3M",
+    "auth": "Authorization: Bearer {{OMNIROUTE_API_KEY}}"
+  },
+  "runtime_llm_node": "@n8n/n8n-nodes-langchain.lmChatAnthropic + chainLlm (pointed at OmniRoute base)",
+  "agent_model_mapping": {
+    "research_01": "claude-sonnet-4-6",
+    "factcheck_01": "claude-sonnet-4-6",
+    "analyst_01": "claude-sonnet-4-6",
+    "writer_01": "claude-sonnet-4-6",
+    "editor_01": "claude-sonnet-4-6",
+    "seo_01": "claude-sonnet-4-6",
+    "orchestrator_01": "claude-sonnet-4-6",
+    "qc_01": "anthropic/claude-sonnet-5"
+  },
+  "model_source_note": "ai_core.agents.model is AUTHORITATIVE. af_agents DataTable mirror shows anthropic/claude-sonnet-5 for all 8 (drift MIG-B09) — ai_core wins.",
+  "available_model_families_observed": ["auto/*", "dva/claude-* (incl claude-sonnet-5)", "dva/gpt-5-*", "dva/gemini-3-*", "grok", "kimi", "~130 total model IDs"],
+  "fallback_configuration": {"status": "NONE / UNKNOWN", "note": "No explicit LLM fallback chain configured in the workflows (MIG-B10). Runtimes call the single OmniRoute base. Not invented."},
+  "routing_configuration": {"note": "OmniRoute performs provider routing behind an OpenAI-compatible surface. AI_FACTORY runtimes request Claude Sonnet via the Anthropic node against the OmniRoute base URL. Per-agent model chosen from ai_core.agents.model."},
+  "embedding_provider": {"status": "BLOCKED (MIG-B02)", "note": "No embedding provider configured. ai_vector embedding columns are vector(1536) but populated NULL. Only keyword knowledge search works. A 1536-dim embedder is required for vector parity.", "api_key": "ENVIRONMENT_VARIABLE_REQUIRED"},
+  "excluded_secrets": ["OMNIROUTE_API_KEY", "BRAVE_SEARCH_API_KEY", "AI_FACTORY_PG_PASSWORD", "EMBEDDING_PROVIDER_API_KEY"]
+}
